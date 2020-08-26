@@ -1,0 +1,25 @@
+{
+  "name": "web-scrapping",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
+  "module": "node_modules",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jipsoft/web-scrapping.git"
+  },
+  "author": "Jhonattan <42176658+jipdev@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^5.2.1"
+  },
+  "description": "",
+  "bugs": {
+    "url": "https://github.com/jipsoft/web-scrapping/issues"
+  },
+  "homepage": "https://github.com/jipsoft/web-scrapping#readme",
+  "devDependencies": {}
+}
