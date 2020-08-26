@@ -1,4 +1,4 @@
-<h3>Web Scraping - PrimeNG Theme<h3>
+<h3>Web Scraping - PrimeNG Theme</h3>
 
 Para utilizar entre na pasta do projeto e faça ``npm install`` e ``node index.js nome-do-tema``.
 
