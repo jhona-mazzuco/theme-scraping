@@ -14,6 +14,7 @@
   "author": "Jhonattan <42176658+jipdev@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.20.0",
     "puppeteer": "^5.2.1"
   },
   "description": "",
