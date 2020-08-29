@@ -14,10 +14,11 @@ Após isso verifique se seus arquivos estão na pasta ``/tmp``.
 ---
 
 <h3>Formatos Suportados:</h3>
-- JSON
-- CSS
-- SCSS
-- SVG
-- PNG
-- JPG
-
+<ol>
+    <li> JSON </li>
+    <li> CSS </li>
+    <li> SCSS </li>
+    <li> SVG </li>
+    <li> PNG </li>
+    <li> JPG </li>
+</ol>
