@@ -17,4 +17,7 @@ Após isso verifique se seus arquivos estão na pasta ``/tmp``.
 - JSON
 - CSS
 - SCSS
+- SVG
+- PNG
+- JPG
 
