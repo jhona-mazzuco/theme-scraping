@@ -21,4 +21,12 @@ Após isso verifique se seus arquivos estão na pasta ``/tmp``.
     <li> SVG </li>
     <li> PNG </li>
     <li> JPG </li>
+    <li> OTF </li>
+    <li> TTF </li>
+    <li> WOFF </li>
+    <li> WOFF2 </li>
 </ol>
+
+-----
+
+<b>Obs:</b> Se possuir arquivos com nomes iguais, o bot prevalecerá o ultimo encontrado!

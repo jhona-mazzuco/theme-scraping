@@ -83,6 +83,10 @@ const deepObjectNavigationAndWriteFileOrCreateFolder = async (page, obj, previou
                 case 'svg':
                 case 'png':
                 case 'jpg':
+                case 'otf':
+                case 'ttf':
+                case 'woff':
+                case 'woff2':
                     const response = await axios.get(value, {
                         responseType: 'stream'
                     });
