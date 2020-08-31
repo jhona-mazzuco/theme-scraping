@@ -2,6 +2,8 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const axios = require('axios');
 
+const TMP_FOLDER = 'tmp';
+
 const createPageAndGoToTemplateUrl = async (template) => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
@@ -13,7 +15,14 @@ const createPageAndGoToTemplateUrl = async (template) => {
     return { browser, page };
 };
 
+const findOrCreateFolderTmp = () => {
+    if (!fs.existsSync(`./${ TMP_FOLDER }`)) {
+        fs.mkdirSync(TMP_FOLDER);
+    }
+};
+
 (async () => {
+    findOrCreateFolderTmp();
     const { page, browser } = await createPageAndGoToTemplateUrl(process.argv[2]);
     const hrefList = await page.evaluate(findAllHref);
     hrefList.shift();
@@ -23,7 +32,7 @@ const createPageAndGoToTemplateUrl = async (template) => {
         obj[key] = await createHrefObject(page, 'assets', href);
     }
     makeFolder('tmp/assets');
-    await deepObjectNavigationAndWriteFileOrCreateFolder(page, obj, 'tmp/assets');
+    await deepObjectNavigationAndWriteFileOrCreateFolder(page, obj, `${ TMP_FOLDER }/assets`);
     await browser.close();
 })();
 
