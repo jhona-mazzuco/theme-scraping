@@ -5,7 +5,7 @@ const axios = require('axios');
 const TMP_FOLDER = 'tmp';
 
 const createPageAndGoToTemplateUrl = async (template) => {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({ headless: false });
     const page = await browser.newPage();
     await page.goto(getAssetsUrl(template));
     const isError404 = await page.evaluate(() => {
@@ -109,7 +109,7 @@ const navigateToUrlAndGetData = async (page, href) => {
     await page.goto(href);
     return await page.evaluate(() => {
         const element = document.querySelector('pre');
-        return element?.firstChild['data'];
+        return element.firstChild['data'];
     });
 };
 
